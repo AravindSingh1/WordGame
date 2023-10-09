@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>WordGame</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="header">
+      <h1>Can you clear the board?</h1>
+
+      <div class="score"><h2>Score: <span id="scoreValue">0</span></h2></div>
+
+      <div class="time">
+        <h2>Time:- <span id="min">03</span>:<span id="sec">00</span> </h2>
+      </div>
+
+      <div class="button"><i class="fa-solid fa-arrow-rotate-left" onclick="refresh()"></i><button type="button" id="button" onclick="start()">Start</button><i class="fa-solid fa-circle-info" onclick="displayInfo()"></i></div>
+
+    </header>
+
+    <section class="wrapper-main" id="wrapper">
+        <div class="resultBox" id="resultBox"></div>
+        <div id="corr">Click Start to play the game! </div>
+        <div class="words-box" id="words-box"></div>
+    </section>
+
+    <div class="finalResult" id="finalResult">
+      <h1 id="winStatus">You won!</h1>
+      <p id="greet">congratulations</p>
+      <p id="nextLevel"></p>
+    </div>
+
+    <div class="info" id="info">
+      <p><span id="ruleNum">1.</span>Click on any of the boxes, the content of
+        the box will move to the result box.
+      </p>
+      <p><span id="ruleNum">2.</span>Click on other box to form the complete word.</p>
+      <p><span id="ruleNum">3.</span>If your guessed word is wrong or invalid,
+         the box will appear again.
+      </p>
+      <p><span id="ruleNum">4.</span>Clear all the boxes to win the game.</p>
+    </div>
+
+    <div class="level" id="level">
+      <h1>Level:<span id="levelNum">1</span></h1>
+      <p id="levelType">Easy</p>
+    </div>
+
+    <button type="button" id="hint" onclick="showHint()">Hint</button>
+
+</body>
+<script src="script.js"></script>
+</html>
